@@ -5,7 +5,7 @@ var D=f.dataset,steps=[].slice.call(f.querySelectorAll('.step')),T=steps.length,
 var back=f.querySelector('[data-back]'),next=f.querySelector('[data-next]'),sub=f.querySelector('[data-submit]');
 var ptext=document.getElementById('progress-text'),bar=f.querySelector('.progress span'),err=f.querySelector('.step-error'),status=document.getElementById('form-status');
 var titles=(D.titles||'').split('|');
-f.classList.add('js');sub.disabled=false;
+f.classList.add('js','at-start');sub.disabled=false;
 
 function show(n,focus){
  cur=n;steps.forEach(function(s,k){s.hidden=k!==n;});
@@ -13,7 +13,10 @@ function show(n,focus){
  ptext.textContent=D.progress.replace('{n}',n+1).replace('{t}',T)+': '+(titles[n]||'');
  bar.style.width=((n+1)/T*100)+'%';
  err.hidden=true;err.textContent='';
- if(focus){var h=steps[n].querySelector('h2');f.scrollIntoView({block:'start'});if(h)h.focus({preventScroll:true});}
+ f.classList.toggle('at-start',n===0);
+ var scroller=document.querySelector('.app-scroll');
+ if(focus){var h=steps[n].querySelector('h2');if(h)h.focus({preventScroll:true});}
+ if(scroller)scroller.scrollTop=0;else if(focus)f.scrollIntoView({block:'start'});
 }
 
 function setErr(el,msg){
