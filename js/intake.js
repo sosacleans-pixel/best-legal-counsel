@@ -61,6 +61,7 @@ f.addEventListener('submit',function(e){
  if(next&&!next.value)next.value=new URL('thanks.html',window.location.href).href;
  if(src)src.value=window.location.href;
  if(ag){var q=new URLSearchParams(window.location.search).get('agent');if(q&&q.trim())ag.value=q.trim();}
+ if(window.BLN_prepareCaseSubmission) window.BLN_prepareCaseSubmission(f);
  if(!f.getAttribute('action')){e.preventDefault();e.stopPropagation();if(status)status.textContent=D.preview||'Thank you.';return;}
  if(status)status.textContent='Sending...';
 });

@@ -1,0 +1,8 @@
+name = "bln-agent-notice"
+main = "agent-notice-worker.js"
+compatibility_date = "2026-11-21"
+account_id = "379b78e2cc2d6b42a5bc13ea89cd1200"
+workers_dev = true
+
+[vars]
+MAIL_FROM = "Best Legal Net <no-reply@coachsalimheyaime.com>"

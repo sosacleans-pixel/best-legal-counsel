@@ -33,6 +33,7 @@
         <input type="hidden" name="_next" id="next-field" value="">
         <input type="hidden" name="_url" id="source-field" value="">
         <input type="hidden" name="agent" id="agent-field" value="direct">
+        <input type="hidden" name="utah_note" id="utah-note-field" value="">
         <label class="honey" for="website">Leave blank</label>
         <input class="honey" type="text" id="website" name="_honey" tabindex="-1" autocomplete="off">
 
@@ -53,8 +54,16 @@
           <input id="accident-date" name="Date of Accident" type="date" required>
         </div>
         <div class="field">
-          <label for="location">City / location <span class="req" aria-hidden="true">*</span></label>
+          <label for="residence-state">State of residence <span class="req" aria-hidden="true">*</span></label>
+          <input id="residence-state" name="residence_state" type="text" autocomplete="address-level1" placeholder="UT" required>
+        </div>
+        <div class="field">
+          <label for="location">City / location where it happened <span class="req" aria-hidden="true">*</span></label>
           <input id="location" name="City / Location" type="text" autocomplete="address-level2" placeholder="City or area where it happened" required>
+        </div>
+        <div class="field">
+          <label for="injury-state">State where it happened <span class="req" aria-hidden="true">*</span></label>
+          <input id="injury-state" name="injury_state" type="text" autocomplete="off" placeholder="UT" required>
         </div>
         <div class="field">
           <label for="accident-type">Type of accident <span class="req" aria-hidden="true">*</span></label>
@@ -88,19 +97,27 @@
         <div class="actions">
           <button type="submit">Submit case review</button>
         </div>
-        <p class="note">By submitting, you ask Best Legal Net to review this information and contact you about your case. This is not legal advice, and submitting this form does not create an attorney-client relationship.</p>
+        <p class="note">By submitting, you ask Best Legal Net to review this information and contact you about your case. This is not legal advice, and submitting this form does not create an attorney-client relationship. If you opened this form from a Best Legal Net agent's link, that agent is told only that a submission happened. They do not receive your name or other information, and they are asked not to contact you.</p>
       </form>
     </div>
   </main>
   <footer>Best Legal Net</footer>
+  <script src="../js/agent-notice-config.js"></script>
+  <script src="../js/agent-notice.js"></script>
   <script>
     (function () {
+      var form = document.getElementById("form");
       var params = new URLSearchParams(window.location.search);
       var agent = (params.get("agent") || "").trim();
       var agentField = document.getElementById("agent-field");
       if (agent) agentField.value = agent;
       document.getElementById("next-field").value = new URL("thanks.html", window.location.href).href;
       document.getElementById("source-field").value = window.location.href;
+      if (form) {
+        form.addEventListener("submit", function () {
+          if (window.BLN_prepareCaseSubmission) window.BLN_prepareCaseSubmission(form);
+        });
+      }
     })();
   </script>
 </body>
