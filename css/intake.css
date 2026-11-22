@@ -103,3 +103,6 @@ label.check:has(input:checked){border-color:var(--gold);background:#fbf7f0}
  body.layout-intake{padding:28px 16px}
  .phone{height:calc(100dvh - 56px);border-radius:28px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.14)}
 }
+
+.legal-ad{margin:16px 0 8px;padding:14px 16px;background:#f3f5f8;border-left:4px solid #14223b;border-radius:0 10px 10px 0;font-size:13px;line-height:1.55;color:#333}
+.legal-ad p{margin:0}
