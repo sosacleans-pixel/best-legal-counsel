@@ -1,3 +1,5 @@
 document.querySelectorAll('form[data-preview]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('[role=status]');if(s)s.textContent=f.getAttribute('data-preview');});});
 var mb=document.getElementById('matchbar');if(mb)mb.addEventListener('submit',function(e){e.preventDefault();var c=document.getElementById('city'),l=document.getElementById('loc');if(c&&l&&l.value)c.value=l.value;document.getElementById('contacto').scrollIntoView();var n=document.getElementById('name');if(n)n.focus({preventScroll:true});});
 document.querySelectorAll('[data-loc]').forEach(function(a){a.addEventListener('click',function(){var c=document.getElementById('city');if(c)c.value=a.getAttribute('data-loc');});});
+
+document.querySelectorAll('form[action*="formsubmit.co"]').forEach(function(f){var n=f.querySelector('[name="_next"]'),u=f.querySelector('[name="_url"]');if(n&&!n.value)n.value=new URL('thanks.html',window.location.href).href;if(u)u.value=window.location.href;});
