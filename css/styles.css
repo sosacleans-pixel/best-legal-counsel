@@ -114,3 +114,16 @@ body.layout-es{background:#fff}
 .wa-cta{display:block;margin:0 14px 14px;text-align:center;background:#25d366;color:#fff;font-weight:700;text-decoration:none;padding:11px;border-radius:999px}
 .wa-cta:hover{background:#1ebe5a}
 @media(max-width:480px){.wa-pop{right:12px;left:12px;bottom:12px;width:auto}}
+
+.policy{padding:48px 20px 72px;max-width:760px}
+.policy h1{margin-top:0}
+.policy h2{margin-top:1.6em}
+.footer-links{margin:0 0 1em}
+.consent-list{margin:16px 0 8px;text-align:left}
+.consent-list label{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;margin:0 0 12px;color:var(--text)}
+.consent-list input[type=checkbox]{margin-top:4px}
+.consent-list label span{min-width:0;overflow-wrap:anywhere;word-break:normal}
+.agent-rules{margin:8px 0 20px;padding-left:1.2em}
+.agent-rules li{margin:0 0 8px}
+@media(min-width:760px){.team .trio{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.team .trio{grid-template-columns:repeat(4,1fr)}}
