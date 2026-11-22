@@ -127,3 +127,9 @@ body.layout-es{background:#fff}
 .agent-rules li{margin:0 0 8px}
 @media(min-width:760px){.team .trio{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1100px){.team .trio{grid-template-columns:repeat(4,1fr)}}
+
+.type-list{display:grid;gap:12px;margin:24px auto 28px;padding:0;list-style:none;max-width:880px}
+.type-list li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-align:center;font-weight:600;display:flex;align-items:center;justify-content:center;min-height:72px}
+.types-close{margin-top:8px;font-size:18px;font-weight:600}
+@media(min-width:600px){.type-list{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.type-list{grid-template-columns:repeat(4,1fr)}}
