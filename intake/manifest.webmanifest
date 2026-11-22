@@ -1,7 +1,7 @@
 {
   "name": "Case intake",
   "short_name": "Case intake",
-  "description": "Private case intake for Best Legal Counsel, a referral service.",
+  "description": "Private case intake for Best Legal Net, a referral service.",
   "start_url": "/intake/",
   "scope": "/intake/",
   "display": "standalone",

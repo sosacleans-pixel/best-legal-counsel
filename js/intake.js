@@ -1,4 +1,4 @@
-/* Best Legal Counsel case intake. Preview only: nothing is ever sent over the network. */
+/* Best Legal Net case intake. Submits to FormSubmit after on-page validation. */
 (function(){
 var f=document.getElementById('intake');if(!f)return;
 var D=f.dataset,steps=[].slice.call(f.querySelectorAll('.step')),T=steps.length,cur=0;
@@ -56,9 +56,13 @@ f.addEventListener('keydown',function(e){
  if(e.key==='Enter'&&e.target.tagName==='INPUT'&&e.target.type!=='checkbox'&&e.target.type!=='radio'&&cur<T-1){e.preventDefault();next.click();}
 });
 f.addEventListener('submit',function(e){
- e.preventDefault();e.stopPropagation();
- for(var k=0;k<T;k++){if(!validate(steps[k])){if(k!==cur){show(k,false);validate(steps[k]);}return;}}
- status.textContent=D.preview; /* Preview only. No fetch, XHR, or form post happens here. */
+ for(var k=0;k<T;k++){if(!validate(steps[k])){e.preventDefault();e.stopPropagation();if(k!==cur){show(k,false);validate(steps[k]);}return;}}
+ var next=document.getElementById('next-field'),src=document.getElementById('source-field'),ag=document.getElementById('agent-field');
+ if(next&&!next.value)next.value=new URL('thanks.html',window.location.href).href;
+ if(src)src.value=window.location.href;
+ if(ag){var q=new URLSearchParams(window.location.search).get('agent');if(q&&q.trim())ag.value=q.trim();}
+ if(!f.getAttribute('action')){e.preventDefault();e.stopPropagation();if(status)status.textContent=D.preview||'Thank you.';return;}
+ if(status)status.textContent='Sending...';
 });
 
 /* Conditional sections: data-show-if="name=value" */

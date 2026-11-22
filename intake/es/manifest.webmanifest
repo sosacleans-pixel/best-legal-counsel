@@ -1,7 +1,7 @@
 {
   "name": "Formulario de caso",
   "short_name": "Formulario de caso",
-  "description": "Formulario privado de caso de Best Legal Counsel, un servicio de referidos.",
+  "description": "Formulario privado de caso de Best Legal Net, un servicio de referidos.",
   "start_url": "/intake/es/",
   "scope": "/intake/",
   "display": "standalone",
