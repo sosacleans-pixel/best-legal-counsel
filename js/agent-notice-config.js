@@ -3,8 +3,8 @@
    Do not put agent email addresses in this file or anywhere else in the public site. */
 window.BLN_AGENT_NOTICE = {
   enabled: false,
-  /* Deployed HTTPS URL of the tiny relay (preferred). Leave empty while disabled. */
-  relayUrl: "",
+  /* Deployed HTTPS URL of the tiny relay. Notices still do not send while enabled is false. */
+  relayUrl: "https://bln-agent-notice.salimheyaime.workers.dev",
   /* Optional FormSubmit random-string aliases, keyed by agent id.
      An alias exists only after that agent inbox activates FormSubmit, which would
      email the agent. Do not add aliases, and do not put email addresses here. */

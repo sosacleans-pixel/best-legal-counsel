@@ -53,3 +53,25 @@ An alternative, only if Salim would rather not add a worker, is a FormSubmit
 random-string alias. That path still requires a one-time activation email to
 the agent's inbox, so it should not be used unless he explicitly says yes to
 that email.
+
+## Deployed worker
+
+Public URL: https://bln-agent-notice.salimheyaime.workers.dev
+
+The account workers.dev subdomain is `salimheyaime`. That is a Cloudflare
+workers.dev hostname, not a Namecheap or custom-domain DNS change. Do not
+attach a custom domain (that would need DNS changes).
+
+Sender (already verified, no DNS changes):
+
+    Best Legal Net <no-reply@coachsalimheyaime.com>
+
+CORS is locked in the worker to `https://bestlegalnet.com`,
+`https://www.bestlegalnet.com`, and `https://blc.salimheyaime.com`.
+
+Test without sending mail: `POST /dry-run` with `{ "agent": "1" }`. The
+response includes the exact subject and body and a `wouldSend` flag. It never
+includes the destination address and never sends mail.
+
+The live site still will not call this worker until `enabled` is set to `true`
+in `js/agent-notice-config.js`.
