@@ -133,18 +133,18 @@ body.layout-es{background:#fff}
 @media(min-width:600px){.type-list{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:900px){.type-list{grid-template-columns:repeat(4,1fr)}}
 
-/* ===== Main menu: full nav on wide screens, Menu button below 1180px ===== */
+/* ===== Main menu: full nav on wide screens, Menu button below 1600px ===== */
 .site-head .wrap,.es-head .wrap{position:relative}
 .menu-btn{display:inline-block;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font:600 15px Inter,system-ui,Arial,sans-serif;cursor:pointer}
 .menu-btn:hover{border-color:var(--gold);color:var(--gold)}
 .site-head nav a[aria-current],.es-nav a[aria-current]{color:var(--gold)}
-@media(max-width:1179px){
+@media(max-width:1599px){
  .es-nav{display:none}
  .site-head.nav-open nav ul,.es-head.nav-open .es-nav{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(20,34,59,.12);padding:4px 20px 12px;z-index:30}
  .site-head.nav-open nav a,.es-head.nav-open .es-nav a{display:block;padding:12px 0;border-bottom:1px solid var(--line);font-weight:600;color:var(--navy)}
  .site-head.nav-open nav li:last-child a,.es-head.nav-open .es-nav a:last-child{border-bottom:0}
 }
-@media(min-width:1180px){.site-head nav ul{display:flex;gap:20px}.menu-btn{display:none}}
+@media(min-width:1600px){.site-head nav ul{display:flex;gap:20px}.menu-btn{display:none}}
 /* ===== For lawyers page ===== */
 .offer-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px}
 .offer-list li{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 20px;color:var(--muted)}
@@ -155,5 +155,7 @@ body.layout-es{background:#fff}
 @media(min-width:900px){.es-lawyer-hero .grid{grid-template-columns:1.1fr .9fr;align-items:start}}
 .es-lawyer-hero .es-form{margin:0;max-width:none}
 .site-head .logo,.es-head .logo{white-space:nowrap;flex-shrink:0}
-@media(min-width:1180px){.site-head nav a,.es-nav a{white-space:nowrap}.site-head nav ul{gap:18px}.es-head .wrap,.es-head .right{flex-wrap:nowrap}.es-nav{gap:10px 16px}}
-@media(min-width:1180px){.head-right .btn{white-space:nowrap}.es-nav{flex-wrap:nowrap}}
+@media(min-width:1600px){.site-head nav a,.es-nav a{white-space:nowrap}.site-head nav ul{gap:18px}.es-head .wrap,.es-head .right{flex-wrap:nowrap}.es-nav{gap:10px 16px}}
+@media(min-width:1600px){.head-right .btn{white-space:nowrap}.es-nav{flex-wrap:nowrap}}
+
+@media(min-width:1600px){.site-head .wrap,.es-head .wrap{max-width:1500px}}
