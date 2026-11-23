@@ -154,9 +154,6 @@ body.layout-es{background:#fff}
 .es-lawyer-hero{text-align:left}.es-lawyer-hero .grid{display:grid;gap:32px}
 @media(min-width:900px){.es-lawyer-hero .grid{grid-template-columns:1.1fr .9fr;align-items:start}}
 .es-lawyer-hero .es-form{margin:0;max-width:none}
-/* Preview placeholder. Fill in or remove before launch. */
-.pending-slot{border:2px dashed var(--gold);background:#fffaf0;border-radius:12px;padding:16px 18px;color:var(--text);font-size:14px;margin:16px 0}
-.pending-slot strong{color:var(--gold)}
 .site-head .logo,.es-head .logo{white-space:nowrap;flex-shrink:0}
 @media(min-width:1180px){.site-head nav a,.es-nav a{white-space:nowrap}.site-head nav ul{gap:18px}.es-head .wrap,.es-head .right{flex-wrap:nowrap}.es-nav{gap:10px 16px}}
 @media(min-width:1180px){.head-right .btn{white-space:nowrap}.es-nav{flex-wrap:nowrap}}
