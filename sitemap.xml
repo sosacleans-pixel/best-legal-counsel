@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Every page on this site still sends noindex, nofollow until launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bestlegalnet.com/</loc></url>
+  <url><loc>https://bestlegalnet.com/es/</loc></url>
+  <url><loc>https://bestlegalnet.com/lawyers/</loc></url>
+  <url><loc>https://bestlegalnet.com/es/abogados/</loc></url>
+  <url><loc>https://bestlegalnet.com/agents/apply/</loc></url>
+  <url><loc>https://bestlegalnet.com/agents/apply/es/</loc></url>
+  <url><loc>https://bestlegalnet.com/privacy/</loc></url>
+  <url><loc>https://bestlegalnet.com/es/privacidad/</loc></url>
+</urlset>
