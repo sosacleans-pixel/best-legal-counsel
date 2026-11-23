@@ -42,6 +42,16 @@
 <input type="hidden" name="_subject" value="Case intake: Best Legal Net">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
+<!-- PREVIEW PREP ONLY. Not active. Do not uncomment without Salim's yes.
+     FormSubmit _autoresponse would email this text to the submitter only (plus a copy of the submission).
+     It will not send while _captcha is false (current state). It is not AJAX, so AJAX is not the blocker.
+     There is no documented field for a custom subject on that submitter email.
+     The _subject field is the office notification subject and must stay as is.
+     Requested submitter subject (not supported): We received your form
+     [date] cannot be filled in by FormSubmit and would appear as the literal characters [date].
+     Dropping the date phrase needs Attorney approval. No SMS.
+<input type="hidden" name="_autoresponse" value="Thank you for contacting Best Legal Net. We received your form on [date]. Best Legal Net is an advertising and information service, not a law firm, and does not provide legal advice. Submitting a form does not create an attorney-client relationship, and no lawyer has agreed to take your matter. Only a participating Utah lawyer you selected may contact you. You are free to hire any lawyer or none. Legal deadlines may apply to your situation, so if your matter is urgent, contact a lawyer directly. To stop further messages, reply to this email.">
+-->
 <input type="hidden" name="_next" id="next-field" value="">
 <input type="hidden" name="_url" id="source-field" value="">
 <input type="hidden" name="agent" id="agent-field" value="direct">
